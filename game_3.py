@@ -37,6 +37,10 @@ def play_game_3(n_lives=10):
         result, board = process_guess(letter, board, word)
         if result == False:
             n_remaining += -1
+        else:
+            for i in range(len(word)):
+                if letter == word[i]:
+                    board[i] = letter
 
         if "".join(board) == word:
             print()

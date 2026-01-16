@@ -16,7 +16,6 @@ def process_guess(letter, board, word):
     result = False
     for i in range(len(word)):
         if letter == word[i]:
-            board[i] = letter
             result = True
     if result:
         print("Well done!", letter, "is in the word")
